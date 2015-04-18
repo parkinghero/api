@@ -17,8 +17,8 @@ mongoose.connect(config.mongodb.uri);
 // });
 
 var IssuesSchema = new mongoose.Schema({
-  title: String,
-  photoId: { type: String, required: true },
+  subject: { type: String, required: true },
+  photoFileName: { type: String, required: true },
   description: String,
   licensePlateNumber: { type: String, required: true },
   userName: { type: String, required: true },

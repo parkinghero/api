@@ -5,16 +5,20 @@ var fs = require('fs');
 var uuid = require('uuid');
 var upload = require('../lib/upload');
 var config = require('../config');
+var lwip = require('lwip');
+
+var destDirUpload = path.join(__dirname, '..', 'static', 'photos', 'orig');
+var destDirUPreview = path.join(__dirname, '..', 'static', 'photos', 'thumb');
 
 router.post('/', [upload, function(req, res, next) {
   var file = req.files['files[]'];
-  var id = file.name.split('.').shift();
-  var tempUrl = [config.baseUrl, config.staticSubDirs.photosTemp, file.name].join('/');
+  var filePathSrc = destDirUpload + '/' + file.name;
+  var filePathDst = destDirUPreview + '/' + file.name;
 
   res.json({
-    id: id,
-    tempUrl: tempUrl
+    photoFileName: file.name
   });
+
 }]);
 
 module.exports = router;
