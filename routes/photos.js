@@ -9,7 +9,7 @@ var config = require('../config');
 router.post('/', [upload, function(req, res, next) {
   var file = req.files['files[]'];
   var id = file.name.split('.').shift();
-  var tempUrl = path.join(config.baseUrl, config.staticSubDirs.photosTemp);
+  var tempUrl = [config.baseUrl, config.staticSubDirs.photosTemp, file.name].join('/');
 
   res.json({
     id: id,
