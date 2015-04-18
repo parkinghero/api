@@ -2,10 +2,8 @@ var express = require('express');
 var router = express.Router();
 var path = require('path');
 var fs = require('fs');
-var uuid = require('uuid');
 var upload = require('../lib/upload');
 var config = require('../config');
-var lwip = require('lwip');
 
 var destDirUpload = path.join(__dirname, '..', 'static', 'photos', 'orig');
 var destDirUPreview = path.join(__dirname, '..', 'static', 'photos', 'thumb');
