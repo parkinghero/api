@@ -1,20 +1,7 @@
 var mongoose = require('mongoose');
 var config = require('../config');
 
-mongoose.connect(config.mongodb.uri);
-
-// var UserSchema = new mongoose.Schema({
-//   id: "111111111111111111",
-//   first_name: "AAA", 
-//   gender: "male", 
-//   last_name: "AAA", 
-//   link: "http://www.facebook.com/11111111111111", 
-//   locale: "uk_UA", 
-//   name: "asdasdasdasdasd", 
-//   timezone: 3, 
-//   updated_time: "2015-01-11T08:02:23+0000", 
-//   verified: true
-// });
+mongoose.connect(config.mongodbUri);
 
 var IssuesSchema = new mongoose.Schema({
   subject: { type: String, required: true },
@@ -26,7 +13,8 @@ var IssuesSchema = new mongoose.Schema({
   address: { type: String, required: true },
   photographingDate: { type: Date, required: true },
   violationType: { type: String, enum: ["a", "b", "c", "d", "e", "f"], required: true },
-  status: { type: String, default: "pending" },
+  status: { type: String, enum: ["rejected", "moderation", "processing", "closed"], default: "moderation" },
+  redmineIssueId: { type: Number },
   updated_at: { type: Date, default: Date.now },
   created_at: { type: Date, default: Date.now }
 });

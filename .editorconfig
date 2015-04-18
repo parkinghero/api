@@ -9,7 +9,7 @@ end_of_line = lf
 insert_final_newline = true
 
 # Indentation override for all JS under lib directory
-[*.js]
+[*.{js,json}]
 indent_style = space
 indent_size = 2
 charset = utf-8

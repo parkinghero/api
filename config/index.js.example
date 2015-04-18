@@ -1,14 +1,13 @@
 module.exports = {
-  staticDir: "static",
-  staticSubDirs: {
-    photosRoot: "photos",
-    photosTemp: "temp"
+  gmail: {
+    user: "",
+    clientId: "",
+    clientSecret: "",
+    refreshToken: ""
   },
-  baseUrl: "http://localhost:3000",
-	mongodb: {
-		uri: "mongodb://localhost:3010/parkinghero"
-	},
-  cors: {
-    origin: "http://localhost:3000"
-  }
+  gmailPass: "",
+	staticDir: "static",
+	baseUrl: "http://api.parkinghero.in.ua",
+	mongodbUri: "mongodb://localhost:3010/parkinghero"
+	redmineUrl: "http://issues.parkinghero.in.ua",
 };
