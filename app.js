@@ -2,12 +2,16 @@ var express = require('express');
 var path = require('path');
 var logger = require('morgan');
 var bodyParser = require('body-parser');
+var cors = require('cors');
+var config = require('./config');
 
 // var routes = require('./routes/index');
 var issues = require('./routes/issues');
 var photos = require('./routes/photos');
 
 var app = express();
+
+app.use(cors());
 
 // uncomment after placing your favicon in /public
 app.use(logger('dev'));
@@ -16,7 +20,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use('/photos', photos);
 
-app.use(express.static(path.join(__dirname, 'static')));
+app.use(express.static(path.join(__dirname, config.staticDir)));
 
 app.use('/issues', issues);
 

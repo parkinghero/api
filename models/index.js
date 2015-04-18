@@ -21,10 +21,11 @@ var IssuesSchema = new mongoose.Schema({
   photoId: { type: String, required: true },
   description: String,
   licensePlateNumber: { type: String, required: true },
+  userName: { type: String, required: true },
   userEmail: { type: String, required: true },
   address: { type: String, required: true },
-  photographingDate: Date,
-  violationType: { type: String, enum: ["aa", "bb", "cc"], required: true },
+  photographingDate: { type: Date, required: true },
+  violationType: { type: String, enum: ["a", "b", "c", "d", "e", "f"], required: true },
   status: { type: String, default: "pending" },
   updated_at: { type: Date, default: Date.now },
   created_at: { type: Date, default: Date.now }

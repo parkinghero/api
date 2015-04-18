@@ -1,0 +1,14 @@
+module.exports = {
+  staticDir: "static",
+  staticSubDirs: {
+    photosRoot: "photos",
+    photosTemp: "temp"
+  },
+  baseUrl: "http://localhost:3000",
+	mongodb: {
+		uri: "mongodb://localhost:3010/parkinghero"
+	},
+  cors: {
+    origin: "http://localhost:3000"
+  }
+};
