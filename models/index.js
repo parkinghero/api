@@ -7,6 +7,8 @@ var IssuesSchema = new mongoose.Schema({
   subject: { type: String, required: true },
   photoFileName: { type: String, required: true },
   description: String,
+  lng: Number,
+  lat: Number,
   licensePlateNumber: { type: String, required: true },
   userName: { type: String, required: true },
   userEmail: { type: String, required: true },
