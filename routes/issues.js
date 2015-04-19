@@ -16,7 +16,7 @@ router.get('/', function(req, res, next) {
     lon: {$exists: true, $ne: null}
   } : void 0;
 
-//models.Issue.find().remove().exec();
+// models.Issue.find().remove().exec();
   models.Issue.find(query).limit(limit).exec(function(err, issues) {
     if (err) return console.error(err);
     res.json(issues);
