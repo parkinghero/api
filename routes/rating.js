@@ -6,7 +6,7 @@ var config = require('../config');
 var redmine = require('../lib/redmine');
 var _ = require('lodash');
 
-var lawyers_group_id = 5;
+var lawyers_group_id = 4;
 var closed_status_id = 11;
 var processing_status_id = 9;
 var project_id = 1;
