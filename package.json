@@ -14,7 +14,7 @@
     "express": "~4.12.2",
     "lodash": "^3.7.0",
     "mongo-sanitize": "^1.0.0",
-    "mongoose": "^4.0.1",
+    "mongoose": "^5.7.6",
     "morgan": "~1.5.1",
     "multer": "^0.1.8",
     "node-rest-client": "^1.5.0",
